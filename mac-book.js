@@ -37,6 +37,7 @@ function promoApplied(id) {
         //now we have to apply 20% discount in sub total
         let discountAmount = fullGrandTotal * (0.02); // This is the amount that will be minus from sub-total
         fullGrandTotal = fullGrandTotal - discountAmount; // after minus this will be the final amount to be paid
+        document.getElementById(id).disabled = true;
     }
     document.getElementById('grand-total').innerText = fullGrandTotal; // updating the  value in html to show the user
 
