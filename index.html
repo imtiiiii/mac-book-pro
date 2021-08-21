@@ -51,20 +51,35 @@
                     <div class="my-4">
                         <div class="mb-3">
                             <h3 class="fw-bold">Memory</h3>
-                            <button type="button" class="btn btn-outline-dark">8Gb unified memory</button>
-                            <button type="button" class="btn btn-outline-dark">16Gb unified memory</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('memory-option',0)">8Gb unified
+                                memory</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('memory-option',180)">16Gb unified memory</button>
                         </div>
-                        <div class="mb-3">
+                        <div class=" mb-3">
                             <h3 class="fw-bold">Storage</h3>
-                            <button type="button" class="btn btn-outline-dark">256Gb SSD storage</button>
-                            <button type="button" class="btn btn-outline-dark">512Gb SSD storage</button>
-                            <button type="button" class="btn btn-outline-dark">1TB SSD storage</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('storage-option',0)">256Gb SSD
+                                storage</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('storage-option',150)">512Gb SSD
+                                storage</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('storage-option',200)">1TB SSD
+                                storage</button>
                         </div>
                         <div class="mt-5 mb-5">
                             <h3 class="fw-bold">Choose your delivery option</h3>
-                            <button type="button" class="btn btn-outline-dark">Friday, Auguest 25 free Prime
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('delivery-option',0)">Friday,
+                                Auguest 25
+                                free Prime
                                 delivery</button>
-                            <button type="button" class="btn btn-outline-dark">Friday, Augues 21 Delivery charge
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="extraProduct('delivery-option',20)">Friday,
+                                Augues 21
+                                Delivery charge
                                 20$</button>
                         </div>
                     </div>
@@ -78,30 +93,32 @@
                         <hr>
                         <div class="d-flex   justify-content-lg-between">
                             <h4>Extra memory cost</h4>
-                            <h4 class="d-flex">$<span>00</span></h4>
+                            <h4 class="d-flex">$<span id="memory-option" class="count-extra-money">00</span></h4>
                         </div>
                         <hr>
                         <div class="d-flex  justify-content-lg-between">
                             <h4>Extra storage cost</h4>
-                            <h4 class="d-flex">$<span>00</span></h4>
+                            <h4 class="d-flex">$<span id="storage-option" class="count-extra-money">00</span></h4>
                         </div>
                         <hr>
                         <div class="d-flex justify-content-lg-between">
-                            <h4>Delivary cost cost</h4>
-                            <h4 class="d-flex">$<span>00</span></h4>
+                            <h4>Delivery cost cost</h4>
+                            <h4 class="d-flex">$<span id="delivery-option" class="count-extra-money">00</span></h4>
                         </div>
                         <hr class="border  border-2 border-danger">
                         <div class="d-flex  justify-content-lg-between">
                             <h4>Total price</h4>
-                            <h4 class="d-flex">$<span>00</span></h4>
+                            <h4 class="d-flex">$<span id="total">1299</span></h4>
                         </div>
                         <hr>
                         <div>
                             <h5>
                                 Add promo code
                             </h5>
-                            <input type="text" aria-label="First name" class="form-control d-inline w-50">
-                            <button class="btn btn-outline-secondary bg-danger text-dark">Apply</button>
+                            <input type="text" aria-label="First name" class="form-control d-inline w-50"
+                                id="promo-value">
+                            <button class="btn btn-outline-secondary bg-danger text-dark"
+                                onclick="promoApplied('promo-value')">Apply</button>
                         </div>
 
                     </div>
@@ -110,9 +127,10 @@
 
             </div>
         </section>
+        <hr>
         <!-- This section(down) is for grand total after apply promo code -->
         <section>
-            <h1 class="text-center">TOTAL :<span>$1299</span></h1>
+            <h1 class="text-center">TOTAL :$<span id="grand-total">1299</span></h1>
         </section>
     </main>
 
